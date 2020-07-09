@@ -17,7 +17,7 @@ function randomDate(start, end) {
 app.get("/api/user/:id/infections", (req, res, next) => {
     const arr = [];
     for (let i = 0; i < 10000; i++) {
-        arr.push({location: {lon: i, lat: 10000 - i}, datetime: randomDate(new Date(1990, 0, 1), new Date())
+        arr.push({id:i,location: {lon: i, lat: 10000 - i}, datetime: randomDate(new Date(1990, 0, 1), new Date())
         })
     }
     res.json({infections: arr});

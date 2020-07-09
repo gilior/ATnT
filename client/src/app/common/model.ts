@@ -1,4 +1,3 @@
-
 export interface IUser {
 
   id: number;
@@ -8,8 +7,8 @@ export interface IUser {
 }
 
 
-
 export interface IInfection {
+  id: number;
   location: location;
   datetime: Date;
 }

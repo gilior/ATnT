@@ -4,15 +4,19 @@ import {SharedModule} from '../../common/modules/shared.module';
 import {HostComponent} from '../components/host/host.component';
 import {RouterModule, Routes} from '@angular/router';
 import {InfectionDetailsComponent} from '../components/infection-details/infection-details.component';
-import {HttpClientModule} from '@angular/common/http';
+import {InfectionResolverService} from '../services/infection-resolver.service';
 // import {AppRoutingModule} from '../../main/modules/app-routing.module';
 
 const routes: Routes = [
   {
-    path: 'host', component: HostComponent, children: [
+    path: 'host', component: HostComponent,
+    children: [
       {
         path: ':id',
-        component: InfectionDetailsComponent
+        component: InfectionDetailsComponent,
+        resolve: {
+          infection: InfectionResolverService
+        }
       }
     ]
   },
