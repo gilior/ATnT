@@ -8,20 +8,21 @@ import {HttpClientModule} from '@angular/common/http';
 // import {AppRoutingModule} from '../../main/modules/app-routing.module';
 
 const routes: Routes = [
-  {path: 'host', component: HostComponent,children:[
+  {
+    path: 'host', component: HostComponent, children: [
       {
-        path:':id',
-        component:InfectionDetailsComponent
+        path: ':id',
+        component: InfectionDetailsComponent
       }
-    ]},
+    ]
+  },
   {path: '', redirectTo: 'host', pathMatch: 'full'}
 ];
 
 @NgModule({
-  declarations: [HostComponent,InfectionDetailsComponent],
+  declarations: [HostComponent, InfectionDetailsComponent],
   imports: [
     CommonModule,
-   HttpClientModule,
     SharedModule,
     RouterModule.forChild(routes)
   ]

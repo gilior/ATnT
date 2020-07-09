@@ -5,7 +5,7 @@ import {IInfection, IUser} from '../../common/model';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
-  providedIn: InfectionsModule
+  providedIn: 'root'
 })
 export class InfectionsService {
 

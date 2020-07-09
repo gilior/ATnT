@@ -7,6 +7,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from '../components/app/app.component';
 import {rootReducer} from '../../store/reducers/reducers';
 import {IAppState} from '../../store/state';
+import {HttpClientModule} from '@angular/common/http';
 // import { TopBarComponent } from '../../common/components/top-bar/top-bar.component';
 // import { SideBarComponent } from '../../common/components/side-bar/side-bar.component';
 
@@ -19,7 +20,8 @@ import {IAppState} from '../../store/state';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgReduxModule
+    NgReduxModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
