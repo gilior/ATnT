@@ -15,7 +15,6 @@ export class InfectionDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.route.data
       .subscribe((data: { infection: IInfection }) => {
         this.location = data.infection.location;

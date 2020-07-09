@@ -1,22 +1,22 @@
- <div class="main-wrp">
-   <div class="up-wrapper">
-     <div class="side-bar"></div>
-     <div class="top-bar-wrapper">
-       <top-bar [items_count]="(infections$|async)?.length" [user]="user$|async"></top-bar>
-     </div>
-   </div>
+<div class="main-wrp">
+  <div class="up-wrapper">
+    <div class="side-bar"></div>
+    <div class="top-bar-wrapper">
+      <top-bar [items_count]="(infections$|async)?.length" [user]="user$|async"></top-bar>
+    </div>
+  </div>
 
-   <div class="down-wrapper">
-     <div class="side-bar">
-       <side-bar [infections]="infections$|async"></side-bar>
-     </div>
+  <div class="down-wrapper">
+    <div class="side-bar">
+      <side-bar [infections]="infections$|async"></side-bar>
+    </div>
 
 
-     <div class="router-wrapper">
-       <router-outlet></router-outlet>
-     </div>
-   </div>
- </div>
+    <div class="router-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 
 
 

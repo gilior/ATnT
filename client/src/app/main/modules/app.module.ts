@@ -8,14 +8,10 @@ import {AppComponent} from '../components/app/app.component';
 import {rootReducer} from '../../store/reducers/reducers';
 import {IAppState} from '../../store/state';
 import {HttpClientModule} from '@angular/common/http';
-// import { TopBarComponent } from '../../common/components/top-bar/top-bar.component';
-// import { SideBarComponent } from '../../common/components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // TopBarComponent,
-    // SideBarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
 })
 export class AppModule {
   constructor(ngRedux: NgRedux<IAppState>) {
-    ngRedux.configureStore(rootReducer,{infections:null,user:null});
+    ngRedux.configureStore(rootReducer, {infections: null, user: null});
 
   }
 }

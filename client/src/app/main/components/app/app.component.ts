@@ -9,17 +9,5 @@ import {Observable} from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ATnT';
-  @select('id') foo$: Observable<number>;
 
-  constructor(public ngRedux: NgRedux<IAppState>) {
-    this.foo$.subscribe((data) => {
-      console.log(data);
-    });
-  }
-
-  updateState(): void {
-    this.ngRedux.dispatch({type: 'test', data: 1});
-
-  }
 }

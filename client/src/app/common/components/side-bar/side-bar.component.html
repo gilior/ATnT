@@ -1,4 +1,4 @@
-<virtual-scroller #scroll [items]="infections_sorted">
+<virtual-scroller  #scroll [items]="infections_sorted">
     <a [routerLink]="[item.id]" *ngFor="let item of scroll.viewPortItems">{{item.datetime | date:'short'}}</a>
 </virtual-scroller>
 

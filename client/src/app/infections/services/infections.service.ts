@@ -4,13 +4,14 @@ import {IInfection, IUser} from '../../common/model';
 import {HttpClient} from '@angular/common/http';
 import {NgRedux} from '@angular-redux/store';
 import {IAppState} from '../../store/state';
+import {Route, Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InfectionsService {
 
-  constructor(private httpClient: HttpClient, private  ngRedux: NgRedux<IAppState>) {
+  constructor(private httpClient: HttpClient, private  ngRedux: NgRedux<IAppState>, private router: Router) {
   }
 
 
@@ -23,7 +24,12 @@ export class InfectionsService {
   }
 
   getInfection(id: number): IInfection {
-    let inf = this.ngRedux.getState().infections.find(i => i.id === id);
-    return inf;
+    if (this.ngRedux.getState().infections == null) {
+      this.router.navigate(['../']);
+    } else {
+      let inf = this.ngRedux.getState().infections.find(i => i.id === id);
+      return inf;
+    }
+
   }
 }

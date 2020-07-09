@@ -13,7 +13,6 @@ export class InfectionResolverService {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IInfection> | Observable<never> {
     let id = +route.paramMap.get('id');
-
     let infection = this.infectionsService.getInfection(id);
     return of(infection);
   }
