@@ -1,0 +1,15 @@
+<div>
+  <top-bar [items_count]="(infections$|async)?.length" [user]="user$|async"></top-bar>
+</div>
+<div class="wrapper">
+  <div>
+    <side-bar [infections]="infections$|async"></side-bar>
+  </div>
+
+  <!--<button (click)="updateState()">update state</button>-->
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
