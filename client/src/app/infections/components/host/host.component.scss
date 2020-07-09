@@ -1,9 +1,37 @@
-.wrapper{
+.down-wrapper{
   display: flex;
   flex-direction: row;
   height: 100%;
 }
+.up-wrapper{
+  display: flex;
+  flex-direction: row;
+  //height: 100%;
+}
+
+.router-wrapper{
+  width: 100%;
+  font-size: xx-large;
+  line-height: 40px;
+}
+
+.top-bar-wrapper{
+  width: 100%;
+  background: darkturquoise;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.main-wrp{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+
+
 
 .side-bar {
-  flex-grow: 0.2;
+  width: 300px;
 }

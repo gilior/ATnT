@@ -3,6 +3,25 @@ virtual-scroller {
   height: 100%
 }
 
-a{
+a {
   display: block;
+  padding: 5px;
+  text-decoration: none;
+  background-color: black;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darkturquoise;
+  }
+
+  &:visited {
+    box-shadow: none;
+    top: 5px;
+
+  }
 }
+
